@@ -161,6 +161,22 @@ html {
 .dark nav {
     background: #aec0e7;
 }
+/* Desktop default */
+.container {
+    display: flex;
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 .dark footer {
     background: black;
