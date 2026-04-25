@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #74cfe6;
+}
+
+header {
+    color: rgb(245, 244, 244);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+nav {
+    background: #f1f0f0;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: rgb(12, 12, 12);
+    margin: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: rgb(38, 0, 255);
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background: rgb(250, 247, 250);
+    border-radius: 10px;
+}
+
+.img img {
+    width: 100%;
+    max-width: 600px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+
+footer {
+    text-align: center;
+    background: #0f0f0f;
+    color: white;
+    padding: 10px;
+}
+
+.cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.size {
+    width: 50%;
+    font-size: large;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.video-container {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+/* Video */
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+/* Overlay */
+.video-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Content on video */
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    top: 40%;
+}
+
+@media (max-width: 768px) {
+    .cont {
+        flex-direction: column;
+    }
+
+    .size {
+        width: 100%;
+    }
+
+    .img img {
+        max-width: 100%;
+    }
+
+    .content {
+        top: 20%;
+        padding: 10px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.dark-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    background: #f3fafa;
+    color: rgb(68, 151, 247);
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.dark-toggle:hover {
+    transform: scale(1.1);
+    background: #0e0e0f;
+}
+.dark {
+    background: #101011;
+    color: white;
+}
+
+.dark section {
+    background: #283750;
+}
+
+.dark nav {
+    background: #aec0e7;
+}
+
+.dark footer {
+    background: black;
+}
